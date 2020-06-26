@@ -1,0 +1,50 @@
+.center-in-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.button.red {
+  background-color: #972f1c;
+  border: 1px solid #972f1c;
+  color: #fff;
+}
+
+.button.green {
+  background-color: #1c9772;
+  border: 1px solid #1c9772;
+  color: #fff;
+}
+
+.button--disabled, button:disabled {
+  border: 1px solid #888888;
+  background: none;
+  background: transparent;
+  color: #888888;
+}
+
+.button--ghost {
+  border: 1px solid #fff;
+  background: none;
+  background: transparent;
+  color: #fff;
+}
+
+.button--ghost:hover {
+  background: #fff;
+  color: #252525;
+}
+
+button ~ button {
+  margin-left: 10px;
+}

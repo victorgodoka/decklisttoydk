@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Decklist to YDK | Duelist Unite</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.15.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.15.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.15.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.15.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.15.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <!-- <div class="center-in-page">
+      <div class="form">
+        <button class="button button--disabled" disabled>
+          Import from .YDK file
+        </button>
+        <button class="button button--ghost">Import from a list</button>
+      </div>
+    </div> -->
+
+    <div class="modal">
+      <form class="modal__body" id="import">
+        <ul class="group__textareas">
+          <li>
+            <label for="deck">main & extra deck</label>
+            <textarea
+              name="deck"
+              id="deck"
+              class="modal__text"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </li>
+          <li>
+            <label for="sidedeck">side deck</label>
+            <textarea
+              name="sidedeck"
+              id="sidedeck"
+              class="modal__text"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </li>
+        </ul>
+        <div class="modal__header">
+          <button type="reset" class="button button--ghost">Clear list</button>
+          <button type="submit" class="button button--ghost green">
+            Submit list
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
