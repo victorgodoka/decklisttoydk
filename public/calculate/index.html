@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decklist to YDK | Duelist Unite</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="materialize.min.css" />
+  <link rel="stylesheet" href="../css/calculate.css" />
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.15.4/firebase-app.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+</head>
+
+<body>
+
+  <div id="comboresults">
+
+  </div>
+  
+  <div class="row">
+    <button id="newcombo" class="button button--ghost--inverted">New Combo</button>
+    <button id="calculate" class="button button--ghost--inverted">Calculate</button>
+  </div>
+  <div class="input-group">
+    <select name="cardsinhand" id="cardsinhand" class="cardsinhand">
+      <option value="0" disabled selected>Hand size</option>
+      <option value="5">5 cards (Going first)</option>
+      <option value="6">6 cards (Going second)</option>
+    </select>
+  </div>
+
+  <div id="combos" class="row">
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="calculate.js"></script>
+  <script src="dropdown.js"></script>
+  <script src="../js/calculate.js"></script>
+</body>
+
+</html>

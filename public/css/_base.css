@@ -14,6 +14,11 @@
   cursor: pointer;
 }
 
+button.small {
+  min-width: 36px;
+  min-height: 36px;
+}
+
 .button.red {
   background-color: #972f1c;
   border: 1px solid #972f1c;
@@ -45,6 +50,33 @@
   color: #252525;
 }
 
-button ~ button {
+.button--ghost--inverted.disabled {
+  border: 1px solid #afafaf;
+  background: none;
+  background: transparent;
+  color: #afafaf;
+}
+
+.button--ghost--inverted {
+  border: 1px solid #252525;
+  background: none;
+  background: transparent;
+  color: #252525;
+}
+
+.button--ghost--inverted:not(.disabled):hover {
+  background: #252525;
+  color: #fff;
+}
+
+.button ~ .button {
   margin-left: 10px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.disabled {
+  pointer-events: none;
 }

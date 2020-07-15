@@ -1,0 +1,44 @@
+@import "_reset.css";
+@import "_base.css";
+
+body {
+  background: url('../images/bg.png') center center no-repeat fixed;
+  background-size: cover;
+  padding: 20px;
+}
+
+.maindeck {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.extradeck, .sidedeck {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .maindeck {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .extradeck, .sidedeck {
+    grid-template-columns: repeat(15, 1fr);
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  .maindeck {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+.card-img {
+  width: 100%;
+}

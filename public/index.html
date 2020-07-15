@@ -7,25 +7,23 @@
     <link rel="stylesheet" href="css/home.css" />
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.15.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.15.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.15.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.15.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.15.4/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
   </head>
   <body>
-    <!-- <div class="center-in-page">
+    <div class="center-in-page">
       <div class="form">
-        <button class="button button--disabled" disabled>
+        <input type="file" class="hide" name="ydkfile" id="ydkfile" />
+        <label for="ydkfile" class="button button--ghost">
           Import from .YDK file
+        </label>
+        <button id="modaltoggle" class="button button--ghost">
+          Import from a list
         </button>
-        <button class="button button--ghost">Import from a list</button>
       </div>
-    </div> -->
+    </div>
 
-    <div class="modal">
+    <div id="modalbody" class="modal">
       <form class="modal__body" id="import">
         <ul class="group__textareas">
           <li>
@@ -53,6 +51,13 @@
           <button type="reset" class="button button--ghost">Clear list</button>
           <button type="submit" class="button button--ghost green">
             Submit list
+          </button>
+          <button
+            type="reset"
+            class="button button--ghost red"
+            id="modaltoggle2"
+          >
+            Close
           </button>
         </div>
       </form>
